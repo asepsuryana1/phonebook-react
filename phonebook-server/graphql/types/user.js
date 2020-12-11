@@ -12,11 +12,14 @@ exports.userType = new GraphQLObjectType({
       userName: {
         type: new GraphQLNonNull(GraphQLID)
       },
-      Name: {
+      nama: {
         type: GraphQLString
       },
-      Age: {
-        type: GraphQLString
+      id: {
+        type: GraphQLInteger
+      },
+      phone: {
+        type: GraphQLInteger
       }
     }
   }
