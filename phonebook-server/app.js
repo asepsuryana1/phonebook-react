@@ -17,8 +17,8 @@ var config = {
 
   firebase.initializeApp(config)
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+//var indexRouter = require('./routes/index');
+
 
 var app = express();
 
@@ -29,11 +29,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors())
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+//app.use('/', indexRouter);
 
-const userSchema = require('./graph').userSchema;
-app.use('/graph', cors(), graphqlHTTP({
+
+const userSchema = require('./graphql').userSchema;
+app.use('/graphql', cors(), graphqlHTTP({
   schema: userSchema,
   rootValue: global,
   graphiql: true
