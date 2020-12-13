@@ -3,9 +3,9 @@
 ```json
 {
   users {
-    userName
-    Name
-    Age
+    iD
+    nama
+    phone
   }
 }
 
