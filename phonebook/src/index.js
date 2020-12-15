@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import PhoneBox from './components/PhoneBox';
 import reportWebVitals from './reportWebVitals';
-import App from './App';
+import UserBox from './components/UserBox';
+import rootReducer from './reducers';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+
+const store = createStore(rootReducer, applyMiddleware(thunk))
 
 //import React, { Component } from 'react';
 
@@ -72,10 +77,9 @@ import App from './App';
 // }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-   
-  </React.StrictMode>,
+  <Provider store={store}>
+  <UserBox />
+  </Provider>,
   document.getElementById('root')
 );
 

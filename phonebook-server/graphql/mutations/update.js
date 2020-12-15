@@ -1,6 +1,6 @@
 var GraphQLNonNull = require('graphql').GraphQLNonNull;
 var GraphQLString = require('graphql').GraphQLString;
-var GraphQLID = require('graphql').GraphQLID
+//var GraphQLID = require('graphql').GraphQLID
 //var GraphQLInteger = require('graphql').GraphQLInteger;
 var UserType = require('../types/user');
 var services = require('../../services');
@@ -9,7 +9,7 @@ exports.update = {
   type: UserType.userType,
   args: {
     id: {
-      type: new GraphQLNonNull(GraphQLID),
+      type: new GraphQLNonNull(GraphQLString),
     },
     nama: {
       type: new GraphQLNonNull(GraphQLString),
