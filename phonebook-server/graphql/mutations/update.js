@@ -8,7 +8,7 @@ var services = require('../../services');
 exports.update = {
   type: UserType.userType,
   args: {
-    ID: {
+    id: {
       type: new GraphQLNonNull(GraphQLID),
     },
     nama: {

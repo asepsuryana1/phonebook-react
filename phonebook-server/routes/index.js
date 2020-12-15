@@ -19,11 +19,11 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function (req, res) {
-  const ID = req.body.ID;
+  const id = req.body.id;
   const phone = req.body.phone;
   const nama = req.body.nama;
 
-  const referencePath = '/phonebook/'+ID+'/';
+  const referencePath = '/phonebook/'+id+'/';
   const userReference = firebase.database().ref(referencePath);
   userReference.set({phone: phone, nama: nama}, function(error) {
     if (error) {
@@ -34,13 +34,13 @@ router.post('/', function (req, res) {
   });
 });
 
-router.put('/:ID', function (req, res) {
-  var ID = req.params.ID;
+router.put('/:id', function (req, res) {
+  var id = req.params.id;
  
   const phone = req.body.phone;
   const nama = req.body.nama;
 
-  var referencePath = '/phonebook/'+ID+'/';
+  var referencePath = '/phonebook/'+id+'/';
   var userReference = firebase.database().ref(referencePath);
   userReference.update({ phone: phone, nama: nama}, function(error) {
     if (error) {
@@ -51,9 +51,9 @@ router.put('/:ID', function (req, res) {
   });
 });
 
-router.delete('/:ID', function (req, res) {
-  var ID = req.params.ID;
-  var referencePath = '/phonebook/'+ID+'/';
+router.delete('/:id', function (req, res) {
+  var id = req.params.id;
+  var referencePath = '/phonebook/'+id+'/';
   var userReference = firebase.database().ref(referencePath);
   userReference.remove((error)=>{
     if (error) {

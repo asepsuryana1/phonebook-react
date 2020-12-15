@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import PhoneBox from './components/PhoneBox';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="dS">
+    <div className="App App-header">
+      <img src={logo} className="App-logo" alt="logo" />
+      <div className="card-header text-center">
+      <div className="asa">
+        <h1 className="App"> <i className="fa fa-address-book"></i> Phones Book</h1>
+        <PhoneBox />
+      </div>
+      </div>
+    </div>
     </div>
   );
 }

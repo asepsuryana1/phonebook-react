@@ -8,18 +8,21 @@ export default function PhoneList(props) {
         <PhoneItem key={index} Phone={item} remove={() => props.deletePhone(item.id)} />
     );
     return (
-        <table >
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Nomor Telpon</th>
-            </tr>
-        </thead>
-        <tbody>
-            {listItems}
-        </tbody>
-    </table>
-
+        <div>
+            <table className="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Nomor Telpon</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {listItems}
+                </tbody>
+            </table>
+        </div>
     )
 } 

@@ -6,7 +6,7 @@ var services = require('../../services');
 exports.remove = {
   type: UserType.userType,
   args: {
-    ID: {
+    id: {
       type: new GraphQLNonNull(GraphQLID)
     }
   },

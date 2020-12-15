@@ -8,7 +8,7 @@ var services = require('../../services');
 exports.add = {
   type: UserType.userType,
   args: {
-    ID: {
+    id: {
       type: new GraphQLNonNull(GraphQLID),
     },
     nama: {

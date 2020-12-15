@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PhoneList from './PhoneList'
 import PhoneForm from './PhoneForm'
+//import logo from './logo.svg';
 
 
 export default class PhoneBox extends Component {
@@ -13,21 +14,25 @@ export default class PhoneBox extends Component {
     }
     addPhone(Phone) {
         this.setState((state) => ({
-            data: [...state.data, Phone] 
+            data: [...state.data, Phone]
         }));
 
     }
     deletePhone(id) {
         this.setState((state) => ({
             data: state.data.filter(item => item.id != id)
-        }))}
+        }))
+    }
 
     render() {
         return (
             <div>
-                <h1> Daftar Phone</h1>
-                <PhoneList data={this.state.data} deletePhone={this.deletePhone} />
-                <PhoneForm addPhone={this.addPhone} />
+                <div className="container card" >              
+                    <div>
+                        <PhoneList data={this.state.data} deletePhone={this.deletePhone} />
+                        <PhoneForm addPhone={this.addPhone} />
+                    </div>
+                </div>
             </div>
         )
     }

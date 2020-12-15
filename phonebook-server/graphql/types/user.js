@@ -9,7 +9,7 @@ exports.userType = new GraphQLObjectType({
   name: 'users',
   fields: function () {
     return {
-      ID: {
+      id: {
         type: new GraphQLNonNull(GraphQLID)
       },
       nama: {
