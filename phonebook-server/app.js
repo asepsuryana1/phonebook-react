@@ -10,12 +10,12 @@ const cors = require("cors");
 const { graphqlHTTP } = require('express-graphql');
 
 var config = {
-    apiKey: 'AIzaSyDXcG2PN2nO1xcLcxW8gtHbomzNP95E7Nc',
-    authDomain: 'nuuby-co.firebaseio.com',
-    databaseURL: 'https://nuuby-co.firebaseio.com',
-    projectId: 'nuuby-co',
-    storageBucket: 'nuuby-co.app.spot.com',
-    messagingSenderId: '850383414810'
+    apiKey: '',
+    authDomain: '',
+    databaseURL: '',
+    projectId: '',
+    storageBucket: ',
+    messagingSenderId: ''
   };
 
   firebase.initializeApp(config)
